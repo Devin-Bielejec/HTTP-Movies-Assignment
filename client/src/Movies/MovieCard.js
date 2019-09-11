@@ -4,14 +4,7 @@ import axios from "axios";
 const MovieCard = props => {
   const { title, director, metascore, stars } = props.movie;
   
-  const deleteMovie = () => {
-    axios
-    .delete(`http://localhost:5000/api/movies/${props.movie.id}`)
-    .then(res => {
-      console.log(res);
-    })
-    .catch(err => console.log("Error", err))
-  }
+
 
   return (
     <div className="movie-card">
@@ -30,7 +23,6 @@ const MovieCard = props => {
         </div>
       ))}
 
-      <button onClick={deleteMovie}>Delete</button>
     </div>
   );
 };
