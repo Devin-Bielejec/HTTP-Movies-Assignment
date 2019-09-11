@@ -24,6 +24,7 @@ function UpdateMovieForm({ values, errors, touched, isSubmitting }) {
 
       <div>
         {touched.stars && errors.stars && <p>{errors.stars}</p>}
+        <h6>Values should be comma separated</h6>
         <Field name="stars" placeholder="stars"  component="textarea"/>
       </div>
      
