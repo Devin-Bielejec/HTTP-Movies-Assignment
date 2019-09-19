@@ -1,7 +1,11 @@
 import React from 'react';
+import axios from "axios";
 
 const MovieCard = props => {
   const { title, director, metascore, stars } = props.movie;
+  
+
+
   return (
     <div className="movie-card">
       <h2>{title}</h2>
@@ -18,6 +22,7 @@ const MovieCard = props => {
           {star}
         </div>
       ))}
+
     </div>
   );
 };
